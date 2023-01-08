@@ -11,7 +11,7 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="navbar-nav ms-auto">
             <NavLink className="nav-link" to="/">Home</NavLink>
-            <NavLink className="nav-link" to="Page1">Page1</NavLink>
+            <NavLink className="nav-link" to="page1">Page1</NavLink>
             <NavLink className="nav-link" to="page2">Page2</NavLink>
           </div>
         </div>
