@@ -7,7 +7,7 @@ import Page2 from "../Page2/Page2";
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-template">
         <Header />
         <div className="container-fluid">
           <div className="row">
