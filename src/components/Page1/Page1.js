@@ -55,73 +55,79 @@ function Page1() {
         <h4>1. Open text file.</h4>
       </div>
 
-      <div className="row mx-3">
-        <label className="form-label" htmlFor="formFile">file input</label>
-        <input
-          className="form-control form-control-sm"
-          type="file"
-          accept="text/*"
-          id="formFile"
-          onChange={(event) => uploadFile(event.target.files[0])} />
-      </div>
-
-      <div className="row mx-3">
-        <label className="form-label" htmlFor="fileContents">show file contents</label>
-        <textarea className="form-control" id="fileContents" rows="3" readOnly value={fileContents} />
+      <div className="border border-2 border-secondary rounded-3 p-2">
+        <div className="row mx-3">
+          <label className="form-label" htmlFor="formFile">file input</label>
+          <input
+            className="form-control form-control-sm"
+            type="file"
+            accept="text/*"
+            id="formFile"
+            onChange={(event) => uploadFile(event.target.files[0])} />
+        </div>
+  
+        <div className="row mx-3">
+          <label className="form-label" htmlFor="fileContents">show file contents</label>
+          <textarea className="form-control" id="fileContents" rows="3" readOnly value={fileContents} />
+        </div>
       </div>
 
       <div className="row mt-3">
         <h4>2. Replace value.</h4>
       </div>
 
-      <div className="row mx-3">
-        <div className="col-sm mt-1">
-          <div className="input-group input-group-sm">
-            <span className="input-group-text" >from</span>
-            <input className="form-control form-control-sm"
-              type="text"
-              value={replaceFrom}
-              onChange={(event) => setReplaceFrom(event.target.value)} />
+      <div className="border border-2 border-secondary rounded-3 p-2">
+        <div className="row mx-3">
+          <div className="col-sm mt-1">
+            <div className="input-group input-group-sm">
+              <span className="input-group-text" >from</span>
+              <input className="form-control form-control-sm"
+                type="text"
+                value={replaceFrom}
+                onChange={(event) => setReplaceFrom(event.target.value)} />
+            </div>
+          </div>
+  
+          <div className="col-sm mt-1">
+            <div className="input-group input-group-sm">
+              <span className="input-group-text" >to</span>
+              <input className="form-control form-control-sm"
+                type="text"
+                value={replaceTo}
+                onChange={(event) => setReplaceTo(event.target.value)}/>
+            </div>
           </div>
         </div>
-
-        <div className="col-sm mt-1">
-          <div className="input-group input-group-sm">
-            <span className="input-group-text" >to</span>
-            <input className="form-control form-control-sm"
-              type="text"
-              value={replaceTo}
-              onChange={(event) => setReplaceTo(event.target.value)}/>
-          </div>
+  
+        <div className="row mt-2 mx-3">
+          <button className="btn btn-sm btn-primary" type="button" onClick={replace}>replace</button>
         </div>
-      </div>
-
-      <div className="row mt-2 mx-3">
-        <button className="btn btn-sm btn-primary" type="button" onClick={replace}>replace</button>
-      </div>
-      <div className="row mt-2 mx-3">
-        <button className="btn btn-sm btn-secondary" type="button" onClick={resetReplace}>reset</button>
-      </div>
-
-      <div className="row mx-3">
-        <label className="form-label" htmlFor="replacedContents">preview</label>
-        <textarea className="form-control" id="replacedContents" rows="3" readOnly value={replacedContents} />
+        <div className="row mt-2 mx-3">
+          <button className="btn btn-sm btn-secondary" type="button" onClick={resetReplace}>reset</button>
+        </div>
+  
+        <div className="row mx-3">
+          <label className="form-label" htmlFor="replacedContents">preview</label>
+          <textarea className="form-control" id="replacedContents" rows="3" readOnly value={replacedContents} />
+        </div>
       </div>
 
       <div className="row mt-3">
         <h4>3. Save file.</h4>
       </div>
 
-      <div className="row mx-3">
-        {downloadDisabled ? (
-          <button className="btn btn-sm btn-secondary" disabled>
-            save
-          </button>
-        ) : (
-          <a className="btn btn-sm btn-primary" href={downloadLink} download={downloadFileName}>
-            save
-          </a>
-        )}
+      <div className="border border-2 border-secondary rounded-3 p-2">
+        <div className="row mx-3">
+          {downloadDisabled ? (
+            <button className="btn btn-sm btn-secondary" disabled>
+              save
+            </button>
+          ) : (
+            <a className="btn btn-sm btn-primary" href={downloadLink} download={downloadFileName}>
+              save
+            </a>
+          )}
+        </div>
       </div>
 
     </div>
