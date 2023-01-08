@@ -12,7 +12,10 @@ permissions:
   id-token: write
 
 jobs:
-  build-app:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,14 +25,6 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-
-  deploy-pages:
-    needs: build-app
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
         with:
