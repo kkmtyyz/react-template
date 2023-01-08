@@ -11,31 +11,31 @@ const App = () => {
         <Header />
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column1
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column2
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column3
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column4
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column5
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column6
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column7
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column8
             </div>
-            <div className="col-lg-2 col-sm-4">
+            <div className="col-lg-2 col-4">
               Column9
             </div>
           </div>

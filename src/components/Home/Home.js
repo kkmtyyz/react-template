@@ -31,7 +31,7 @@ function Home() {
       </div>
 
       <div className="row mt-3">
-        <div className="col-lg ps-0">
+        <div className="col-sm">
           <div className="input-group input-group-sm p-0">
             <label className="input-group-text" htmlFor="formSelect">select</label>
             <select className="form-select form-select-sm" id="formSelect">
@@ -42,7 +42,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-sm pe-0">
+        <div className="col-sm">
           <div className="row">
             Check
             <div className="form-check">
