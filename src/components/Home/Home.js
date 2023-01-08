@@ -95,6 +95,11 @@ function Home() {
           <input className="form-control form-control-sm" type="text" readOnly placeholder={inputRange} />
         </div>
       </div>
+
+      <div className="row mt-3">
+        <label className="form-label" htmlFor="formDate">date</label>
+        <input className="form-control form-control-sm" type="date" id="formDate" />
+      </div>
     </div>
   );
 }
