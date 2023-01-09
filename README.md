@@ -1,4 +1,4 @@
-# ct-template
+# react-template
 
 ## github pages
 https://kkmtyyz.github.io/react-template/
@@ -9,3 +9,7 @@ https://kkmtyyz.github.io/react-template/
 
 ## run local
 `$ npm start`
+
+## License
+[MIT](./LICENSE-MIT)
+
