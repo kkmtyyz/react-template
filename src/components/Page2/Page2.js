@@ -17,7 +17,7 @@ function Page2() {
       return response.json();
     } catch (e) {
       console.error(e);
-      return {"message": e};
+      return {"message": e.message, "url": url};
     }
   }
 
@@ -33,7 +33,7 @@ function Page2() {
       return response.json();
     } catch (e) {
       console.error(e);
-      return {"message": e};
+      return {"message": e.message, "url": url};
     }
   }
 
