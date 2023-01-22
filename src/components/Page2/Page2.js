@@ -11,27 +11,46 @@ function Page2() {
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(false);
 
-  function getRequest() {
-    fetch(API_URL + "/get-test")
-      .then((response) => response.json())
-      .then((data) => setGetResponse(JSON.stringify(data)));
+  async function getRest(url) {
+    try {
+      const response = await fetch(url);
+      return response.json();
+    } catch (e) {
+      console.error(e);
+      return {"message": e};
+    }
   }
 
-  function postRequest() {
+  async function postRest(url, data) {
+    try {
+      const method = "POST";
+      const body = JSON.stringify(data);
+      const headers = {
+        "Content-Type": "application/json"
+      };
+
+      const response = await fetch(url, {method, headers, body});
+      return response.json();
+    } catch (e) {
+      console.error(e);
+      return {"message": e};
+    }
+  }
+
+  async function getRequest() {
+    const response = await getRest(API_URL + "/get-test");
+    setGetResponse(JSON.stringify(response));
+  }
+
+  async function postRequest() {
     const data = {
       requestText: requestText,
       selectValue: selectValue,
       switch1: switch1,
       switch2: switch2,
     }
-    const method = "POST";
-    const body = JSON.stringify(data);
-    const headers = {
-      "Content-Type": "application/json"
-    };
-    fetch(API_URL + "/post-test", {method, headers, body})
-      .then((response) => response.json())
-      .then((data) => setPostResponse(JSON.stringify(data)));
+    const response = await postRest(API_URL + "/post-test", data);
+    setPostResponse(JSON.stringify(response));
   }
 
   return (
