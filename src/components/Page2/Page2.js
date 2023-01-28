@@ -59,11 +59,11 @@ function Page2() {
         <h1 className="text-center">Page2</h1>
       </div>
 
-      <div className="row mt-3">
-        <h4>Get Request</h4>
+      <div className="row mt-3 mx-3">
+        <h4 className="p-0">Get Request</h4>
       </div>
 
-      <div className="border border-2 border-secondary rounded-3 p-2">
+      <div className="border border-2 border-secondary rounded-3 p-2 mx-3">
         <div className="row mx-3">
             <button className="btn btn-sm btn-primary" type="button" onClick={getRequest}>
               get request
@@ -71,18 +71,18 @@ function Page2() {
         </div>
   
         <div className="row mx-3">
-          <label className="form-label" htmlFor="getResponse">response</label>
+          <label className="form-label p-0" htmlFor="getResponse">response</label>
           <textarea className="form-control" id="getResponse" rows="5" readOnly value={getResponse} />
         </div>
       </div>
 
-      <div className="row mt-3">
-        <h4>Post Request</h4>
+      <div className="row mt-3 mx-3">
+        <h4 className="p-0">Post Request</h4>
       </div>
 
-      <div className="border border-2 border-secondary rounded-3 p-2">
+      <div className="border border-2 border-secondary rounded-3 p-2 mx-3">
         <div className="row mx-3">
-          <div className="input-group input-group-sm">
+          <div className="input-group input-group-sm p-0">
             <span className="input-group-text" >message</span>
             <input className="form-control form-control-sm"
               type="text"
@@ -92,7 +92,7 @@ function Page2() {
         </div>
   
         <div className="row mx-3">
-          <div className="col-sm mt-1">
+          <div className="col-sm mt-1 p-0 pe-sm-1">
             <div className="input-group input-group-sm p-0">
               <label className="input-group-text" htmlFor="formSelect">select</label>
               <select className="form-select form-select-sm"
@@ -105,7 +105,7 @@ function Page2() {
             </div>
           </div>
   
-          <div className="col-sm mt-1">
+          <div className="col-sm mt-1 p-0 ps-sm-1">
             <div className="form-check form-switch">
               <input className="form-check-input"
                   type="checkbox"
@@ -130,7 +130,7 @@ function Page2() {
         </div>
   
         <div className="row mx-3">
-          <label className="form-label" htmlFor="getResponse">response</label>
+          <label className="form-label p-0" htmlFor="getResponse">response</label>
           <textarea className="form-control" id="getResponse" rows="5" readOnly value={postResponse} />
         </div>
       </div>

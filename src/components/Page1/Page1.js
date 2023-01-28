@@ -51,13 +51,13 @@ function Page1() {
         <h1 className="text-center">Page1</h1>
       </div>
 
-      <div className="row mt-3">
-        <h4>1. Open text file.</h4>
+      <div className="row mt-3 mx-3">
+        <h4 className="p-0">1. Open text file.</h4>
       </div>
 
-      <div className="border border-2 border-secondary rounded-3 p-2">
+      <div className="border border-2 border-secondary rounded-3 p-2 mx-3">
         <div className="row mx-3">
-          <label className="form-label" htmlFor="formFile">file input</label>
+          <label className="form-label p-0" htmlFor="formFile">file input</label>
           <input
             className="form-control form-control-sm"
             type="file"
@@ -67,18 +67,19 @@ function Page1() {
         </div>
   
         <div className="row mx-3">
-          <label className="form-label" htmlFor="fileContents">show file contents</label>
+          <label className="form-label p-0" htmlFor="fileContents">show file contents</label>
           <textarea className="form-control" id="fileContents" rows="3" readOnly value={fileContents} />
         </div>
       </div>
 
-      <div className="row mt-3">
-        <h4>2. Replace value.</h4>
+      <div className="row mt-3 mx-3">
+        <h4 className="p-0">2. Replace value.</h4>
       </div>
 
-      <div className="border border-2 border-secondary rounded-3 p-2">
-        <div className="row mx-3">
-          <div className="col-sm mt-1">
+      <div className="border border-2 border-secondary rounded-3 p-2 mx-3">
+        <div className="row mx-3 p-0">
+
+          <div className="col-sm mt-1 p-0 pe-sm-1">
             <div className="input-group input-group-sm">
               <span className="input-group-text" >from</span>
               <input className="form-control form-control-sm"
@@ -88,7 +89,7 @@ function Page1() {
             </div>
           </div>
   
-          <div className="col-sm mt-1">
+          <div className="col-sm mt-1 p-0 ps-sm-1">
             <div className="input-group input-group-sm">
               <span className="input-group-text" >to</span>
               <input className="form-control form-control-sm"
@@ -97,6 +98,7 @@ function Page1() {
                 onChange={(event) => setReplaceTo(event.target.value)}/>
             </div>
           </div>
+
         </div>
   
         <div className="row mt-2 mx-3">
@@ -107,16 +109,16 @@ function Page1() {
         </div>
   
         <div className="row mx-3">
-          <label className="form-label" htmlFor="replacedContents">preview</label>
+          <label className="form-label p-0" htmlFor="replacedContents">preview</label>
           <textarea className="form-control" id="replacedContents" rows="3" readOnly value={replacedContents} />
         </div>
       </div>
 
-      <div className="row mt-3">
-        <h4>3. Save file.</h4>
+      <div className="row mt-3 mx-3">
+        <h4 className="p-0">3. Save file.</h4>
       </div>
 
-      <div className="border border-2 border-secondary rounded-3 p-2">
+      <div className="border border-2 border-secondary rounded-3 p-2 mx-3">
         <div className="row mx-3">
           {downloadDisabled ? (
             <button className="btn btn-sm btn-secondary" disabled>
